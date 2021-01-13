@@ -1,4 +1,4 @@
-# flutter_application_2
+# HouseOfCake
 
 A new Flutter project.
 
