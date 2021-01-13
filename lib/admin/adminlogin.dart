@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/admin/Uploadpage.dart';
 
 import 'package:flutter_application_2/screens/custumtextfield.dart';
-import 'package:flutter_application_2/screens/registerscreen.dart';
 
 class AdminLoginScreen extends StatefulWidget {
   @override
@@ -139,41 +138,6 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
                             fontSize: 20,
                           ))),
                 )),
-            SizedBox(
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  'Create an Account?',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w900,
-                    fontSize: 16,
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => SignUpScreen()));
-                  },
-                  child: Text(
-                    'SignUp',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w900,
-                        fontSize: 16,
-                        decoration: TextDecoration.underline),
-                  ),
-                ),
-              ],
-            ),
           ]))),
     );
   }

@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/screens/welcomescreen.dart';
 
 import 'profilepage.dart';
 import 'cakepage.dart';
@@ -9,8 +11,9 @@ class FirstPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Cake Shop',
-        style: TextStyle(fontSize: 25.0),
+        title: Text(
+          'Cake Shop',
+          style: TextStyle(fontSize: 25.0),
         ),
         backgroundColor: Color(0xffec407a),
         actions: [
@@ -24,7 +27,6 @@ class FirstPage extends StatelessWidget {
           ),
         ],
       ),
-
       drawer: Drawer(
         child: ListView(
           children: [
@@ -35,16 +37,17 @@ class FirstPage extends StatelessWidget {
                 // backgroundColor: Colors.pink,
                 backgroundImage: AssetImage('assets/img3.jpg'),
               ),
-              decoration: BoxDecoration(color:Colors.purpleAccent),
+              decoration: BoxDecoration(color: Colors.purpleAccent),
             ),
             ListTile(
               leading: Icon(Icons.account_circle),
               title: Text('My Account'),
-              onTap: (){
+              onTap: () {
                 Navigator.of(context).pop();
-                Navigator.push(context, MaterialPageRoute(
-                  builder: (BuildContext context) => ProfilePage()
-                ));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => ProfilePage()));
               },
             ),
             Divider(
@@ -54,11 +57,12 @@ class FirstPage extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.shopping_basket),
               title: Text('My Order'),
-              onTap: (){
+              onTap: () {
                 Navigator.of(context).pop();
-                Navigator.push(context, MaterialPageRoute(
-                    builder: (BuildContext context) => ProfilePage()
-                ));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => ProfilePage()));
               },
             ),
             Divider(
@@ -68,11 +72,12 @@ class FirstPage extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.rate_review),
               title: Text('Rate App'),
-              onTap: (){
+              onTap: () {
                 Navigator.of(context).pop();
-                Navigator.push(context, MaterialPageRoute(
-                    builder: (BuildContext context) => ProfilePage()
-                ));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => ProfilePage()));
               },
             ),
             Divider(
@@ -82,11 +87,12 @@ class FirstPage extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.design_services),
               title: Text('Terms of Services'),
-              onTap: (){
+              onTap: () {
                 Navigator.of(context).pop();
-                Navigator.push(context, MaterialPageRoute(
-                    builder: (BuildContext context) => ProfilePage()
-                ));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => ProfilePage()));
               },
             ),
             Divider(
@@ -96,11 +102,12 @@ class FirstPage extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.group),
               title: Text('About Us'),
-              onTap: (){
+              onTap: () {
                 Navigator.of(context).pop();
-                Navigator.push(context, MaterialPageRoute(
-                    builder: (BuildContext context) => ProfilePage()
-                ));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => ProfilePage()));
               },
             ),
             Divider(
@@ -110,28 +117,29 @@ class FirstPage extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.logout),
               title: Text('Logout'),
-              onTap: (){
+              onTap: () {
+                FirebaseAuth.instance.signOut();
                 Navigator.of(context).pop();
-                Navigator.push(context, MaterialPageRoute(
-                    builder: (BuildContext context) => ProfilePage()
-                ));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => WelcomeScreen()));
               },
             ),
           ],
-          ),
         ),
-
-        body: ListView(
-          padding: EdgeInsets.only(left:8.0),
-          children: [
-            Container(
-             margin: EdgeInsets.symmetric(vertical:5.0),
-             height: 65.0, 
-             child: ListView(
-               scrollDirection: Axis.horizontal,
-               children: [
-                 Container(
-                   height: 70.0,
+      ),
+      body: ListView(
+        padding: EdgeInsets.only(left: 8.0),
+        children: [
+          Container(
+            margin: EdgeInsets.symmetric(vertical: 5.0),
+            height: 65.0,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                Container(
+                  height: 70.0,
                   margin: EdgeInsets.all(10),
                   child: RaisedButton(
                     onPressed: () {},
@@ -148,7 +156,7 @@ class FirstPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(30.0)),
                       child: Container(
                         constraints:
-                        BoxConstraints(maxWidth: 80.0, minHeight:1.0),
+                            BoxConstraints(maxWidth: 80.0, minHeight: 1.0),
                         alignment: Alignment.center,
                         child: Text(
                           "Top",
@@ -158,8 +166,8 @@ class FirstPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                 ),
-                 Container(
+                ),
+                Container(
                   height: 50.0,
                   margin: EdgeInsets.all(10),
                   child: RaisedButton(
@@ -177,7 +185,7 @@ class FirstPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(30.0)),
                       child: Container(
                         constraints:
-                        BoxConstraints(maxWidth:90.0, minHeight:1.0),
+                            BoxConstraints(maxWidth: 90.0, minHeight: 1.0),
                         alignment: Alignment.center,
                         child: Text(
                           "Custom",
@@ -206,7 +214,7 @@ class FirstPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(30.0)),
                       child: Container(
                         constraints:
-                        BoxConstraints(maxWidth:100.0, minHeight:1.0),
+                            BoxConstraints(maxWidth: 100.0, minHeight: 1.0),
                         alignment: Alignment.center,
                         child: Text(
                           "Birthday",
@@ -235,7 +243,7 @@ class FirstPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(30.0)),
                       child: Container(
                         constraints:
-                        BoxConstraints(maxWidth:110.0, minHeight:1.0),
+                            BoxConstraints(maxWidth: 110.0, minHeight: 1.0),
                         alignment: Alignment.center,
                         child: Text(
                           "Anniversary",
@@ -264,7 +272,7 @@ class FirstPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(30.0)),
                       child: Container(
                         constraints:
-                        BoxConstraints(maxWidth:100.0, minHeight:1.0),
+                            BoxConstraints(maxWidth: 100.0, minHeight: 1.0),
                         alignment: Alignment.center,
                         child: Text(
                           "Wedding",
@@ -293,7 +301,7 @@ class FirstPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(30.0)),
                       child: Container(
                         constraints:
-                        BoxConstraints(maxWidth:80.0, minHeight:1.0),
+                            BoxConstraints(maxWidth: 80.0, minHeight: 1.0),
                         alignment: Alignment.center,
                         child: Text(
                           "Fruit",
@@ -304,17 +312,16 @@ class FirstPage extends StatelessWidget {
                     ),
                   ),
                 ),
-               ],
-             ),
+              ],
             ),
-            Container(
-             height: MediaQuery.of(context).size.height - 50.0,
-            width: double.infinity,
-            child: CakePage(), 
-            ),
-          ],
           ),
-
+          Container(
+            height: MediaQuery.of(context).size.height - 50.0,
+            width: double.infinity,
+            child: CakePage(),
+          ),
+        ],
+      ),
     );
   }
 }
