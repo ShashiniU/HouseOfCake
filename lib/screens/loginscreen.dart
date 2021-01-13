@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/homescreen/homepage.dart';
 
 import 'package:flutter_application_2/screens/custumtextfield.dart';
-import 'package:flutter_application_2/screens/home.dart';
 import 'package:flutter_application_2/screens/registerscreen.dart';
 
 class LoginScreen extends StatefulWidget {

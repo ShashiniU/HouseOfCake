@@ -1,7 +1,5 @@
 import 'dart:io';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -181,7 +179,7 @@ class _UploadPageState extends State<UploadPage>
                   fontSize: 16,
                   fontWeight: FontWeight.bold),
             ),
-            onPressed: uploading ? null : () => uploadImageandItem(),
+            onPressed: uploading ? null : () => clearFormInfor(),
           ),
         ],
       ),
@@ -298,21 +296,5 @@ class _UploadPageState extends State<UploadPage>
     setState(() {
       uploading = true;
     });
-    String imagedownloadUrl = await uploadItemImage(file);
-    saveItemInfo(imagedownloadUrl);
-  }
-
-  Future<String> uploadItemImage(mFileImage) async {
-    final Reference storageReference =
-        FirebaseStorage.instance.ref().child("Items");
-    UploadTask uploadTask =
-        storageReference.child("product_$productId.jpg").putFile(mFileImage);
-    TaskSnapshot taskSnapshot = await uploadTask;
-    String downdloadUrl = await taskSnapshot.ref.getDownloadURL();
-    return downloadUrl;
-  }
-
-  saveItemInfo(String downloadUrl) {
-    final itemRef = FirebaseFirestore.instance.collection("items");
   }
 }

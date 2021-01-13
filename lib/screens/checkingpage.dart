@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:flutter_application_2/constant.dart';
+import 'package:flutter_application_2/homescreen/homepage.dart';
 
-import 'package:flutter_application_2/screens/home.dart';
 import 'package:flutter_application_2/screens/welcomescreen.dart';
 
 class LoadinPage extends StatelessWidget {
