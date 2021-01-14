@@ -1,27 +1,20 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/admin/Uploadpage.dart';
+import 'package:flutter_cakecategory/anniversary.dart';
 
-import 'package:google_fonts/google_fonts.dart';
 
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+// import 'package:flutter_cakecategory/theme.dart';
 
+void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-// This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      home:AnniversaryPage(),
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-          textTheme: GoogleFonts.poppinsTextTheme(
-        Theme.of(context).textTheme,
-      )),
-      home: UploadPage(),
     );
   }
 }
+
