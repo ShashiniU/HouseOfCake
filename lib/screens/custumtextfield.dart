@@ -39,7 +39,7 @@ class CustumTextField extends StatelessWidget {
         controller: controller,
         textInputAction: textInputAction,
         style: TextStyle(
-            color: Colors.white, fontSize: 18, fontWeight: FontWeight.w700),
+            color: Colors.white, fontSize: 18, fontWeight: FontWeight.w100),
         decoration: InputDecoration(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(25),
