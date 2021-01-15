@@ -31,20 +31,10 @@ class CakeDetailsPage extends StatelessWidget {
       body: ListView(
         children: [
           SizedBox(height: 15.0),
-          Padding(
-            padding: EdgeInsets.only(left: 20.0),
-            child: Text('Cake Details',
-                style: TextStyle(
-                    // fontFamily: 'Varela',
-                    fontSize: 35.0,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xffd81b60))),
-          ),
-          SizedBox(height: 15.0),
           Hero(
               tag: assetPath,
               child: Image.asset(assetPath,
-                  height: 150.0, width: 100.0, fit: BoxFit.contain)),
+                  height: 250.0, width: 150.0, fit: BoxFit.contain)),
           SizedBox(height: 20.0),
           Center(
             child: Text(cakeprice,
