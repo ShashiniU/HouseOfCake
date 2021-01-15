@@ -69,6 +69,12 @@ flutter:
   assets:
     - assets/images/logoIcon.png
     - assets/imghome/
+    - assets/cakecategories/anniversaryCakes/
+    - assets/cakecategories/birthdaycakes/
+    - assets/cakecategories/fruitCakes/
+    - assets/cakecategories/themeCakes/
+    - assets/cakecategories/weddingCakes/
+
 
   #   - images/a_dot_ham.jpeg
 

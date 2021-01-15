@@ -2,6 +2,10 @@ import 'dart:ui';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/Category/annivesary/newanniveryhome.dart';
+import 'package:flutter_application_2/Category/birthday/newbirthdayhome.dart';
+import 'package:flutter_application_2/Category/fruit/newfruithome.dart';
+import 'package:flutter_application_2/Category/wedding/newweddinhome.dart';
 import 'package:flutter_application_2/homescreen/custumdesignPage.dart';
 import 'package:flutter_application_2/screens/welcomescreen.dart';
 import 'package:wave_drawer/wave_drawer.dart';
@@ -313,7 +317,10 @@ class _FirstPageState extends State<FirstPage> {
                   height: 50.0,
                   margin: EdgeInsets.all(10),
                   child: RaisedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => NewBirthdayHome()));
+                    },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(80.0)),
                     padding: EdgeInsets.all(0.0),
@@ -342,7 +349,10 @@ class _FirstPageState extends State<FirstPage> {
                   height: 50.0,
                   margin: EdgeInsets.all(10),
                   child: RaisedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => NewAnnivesaryHome()));
+                    },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(80.0)),
                     padding: EdgeInsets.all(0.0),
@@ -371,7 +381,10 @@ class _FirstPageState extends State<FirstPage> {
                   height: 50.0,
                   margin: EdgeInsets.all(10),
                   child: RaisedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => NewWeddingHome()));
+                    },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(80.0)),
                     padding: EdgeInsets.all(0.0),
@@ -400,7 +413,10 @@ class _FirstPageState extends State<FirstPage> {
                   height: 50.0,
                   margin: EdgeInsets.all(10),
                   child: RaisedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => NewFruitHome()));
+                    },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(80.0)),
                     padding: EdgeInsets.all(0.0),
