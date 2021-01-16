@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/admin/adminlogin.dart';
+import 'package:flutter_application_2/homescreen/homepage.dart';
 
 import 'package:flutter_application_2/screens/loginscreen.dart';
 import 'package:flutter_application_2/screens/registerscreen.dart';
@@ -153,7 +154,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => HomePage()));
+                    },
                     child: Text(
                       'SKIP',
                       style: TextStyle(

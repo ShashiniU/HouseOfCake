@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/Category/CategoryPage.dart';
 
 import 'firstpage.dart';
-import 'secondpage.dart';
 import 'thirdpage.dart';
 import 'fourthpage.dart';
 
@@ -10,8 +10,8 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin{
-
+class _HomePageState extends State<HomePage>
+    with SingleTickerProviderStateMixin {
   TabController controller;
 
   @override
@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     // ignore: todo
     // TODO: implement initState
     super.initState();
-    controller =TabController(vsync: this, length: 4);
+    controller = TabController(vsync: this, length: 4);
   }
 
   @override
@@ -29,6 +29,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     super.dispose();
     controller.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,24 +40,20 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           indicatorColor: Color(0xffd81b60),
           indicatorWeight: 10.0,
           indicatorPadding: EdgeInsets.zero,
+          labelColor: Color(0xffd81b60),
+          unselectedLabelColor: Colors.grey,
           tabs: [
-            Tab(icon: Icon(Icons.home, color:Color(0xfff06292))),
-            Tab(icon: Icon(Icons.favorite, color:Color(0xfff06292))),
-            Tab(icon: Icon(Icons.account_circle, color:Color(0xfff06292))),
-            Tab(icon: Icon(Icons.shopping_basket, color:Color(0xfff06292))),
+            Tab(icon: Icon(Icons.home), text: "Home"),
+            Tab(icon: Icon(Icons.category_rounded), text: "Category"),
+            Tab(icon: Icon(Icons.account_circle), text: "Profile"),
+            Tab(icon: Icon(Icons.shopping_basket), text: "Cart"),
           ],
         ),
       ),
-
       body: TabBarView(
         controller: controller,
-        children: [
-          FirstPage(),
-          SecondPage(),
-          ThirdPage(),
-          FourthPage()
-        ],
-        ),
+        children: [FirstPage(), CategoryPage(), ThirdPage(), FourthPage()],
+      ),
     );
   }
 }

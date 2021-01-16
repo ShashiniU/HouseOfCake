@@ -2,10 +2,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/homescreen/homepage.dart';
 
 import 'package:flutter_application_2/screens/custumtextfield.dart';
 import 'package:flutter_application_2/screens/erroralert.dart';
-import 'package:flutter_application_2/screens/home.dart';
 import 'package:flutter_application_2/screens/loginscreen.dart';
 
 class SignUpScreen extends StatefulWidget {
