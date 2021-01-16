@@ -7,19 +7,19 @@ class CakePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Color(0xFFFCFAF8),
+      backgroundColor: Colors.pink[100],
       body: ListView(
         children: [
           SizedBox(height: 15.0),
           Container(
-            padding: EdgeInsets.only(right: 9.0, left: 5.0),
+            padding: EdgeInsets.only(right: 9.0, left: 7.0),
             width: MediaQuery.of(context).size.width - 30.0,
             height: MediaQuery.of(context).size.height - 50.0,
             child: GridView.count(
               crossAxisCount: 2,
               primary: false,
-              crossAxisSpacing: 10.0,
-              mainAxisSpacing: 20.0,
+              crossAxisSpacing: 5.0,
+              mainAxisSpacing: 10.0,
               childAspectRatio: 0.8,
               children: [
                 //six cake cards
@@ -48,7 +48,7 @@ class CakePage extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 250.0)
+          SizedBox(height: 200.0)
         ],
       ),
     );

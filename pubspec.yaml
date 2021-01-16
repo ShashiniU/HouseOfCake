@@ -31,6 +31,9 @@ dependencies:
   image_picker: ^0.6.7+21
   firebase_storage: ^6.0.0
   cloud_firestore: ^0.15.0
+  wave_drawer: ^0.1.1
+  shimmer: ^1.1.2
+  
   
    
 
@@ -45,9 +48,15 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: "^0.8.0"
+  
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "icons/logoIcon.png"
 
 # The following section is specific to Flutter.
 flutter:
@@ -59,8 +68,14 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/logoIcon.png
+    - assets/images/
     - assets/imghome/
+    - assets/cakecategories/anniversaryCakes/
+    - assets/cakecategories/birthdaycakes/
+    - assets/cakecategories/fruitCakes/
+    - assets/cakecategories/themeCakes/
+    - assets/cakecategories/weddingCakes/
+
 
   #   - images/a_dot_ham.jpeg
 
@@ -75,10 +90,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: Pacifico
+      fonts:
+        - asset: fonts/Pacifico-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

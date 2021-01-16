@@ -10,3 +10,8 @@ class Constants {
     color: Colors.black,
   );
 }
+
+const kTextColor = Color(0xFF535353);
+const kTextlightcolor = Color(0xFFACACAC);
+
+const kdefaultpadding = 20.0;
