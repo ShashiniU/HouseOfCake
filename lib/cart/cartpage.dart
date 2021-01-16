@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/cart/cartpage.dart';
 
-class CakeDetailsPage extends StatelessWidget {
+class CartScreen extends StatelessWidget {
   final assetPath, cakeprice, cakename;
 
-  CakeDetailsPage({this.assetPath, this.cakeprice, this.cakename});
+  CartScreen({this.assetPath, this.cakeprice, this.cakename});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -103,29 +102,22 @@ class CakeDetailsPage extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20.0),
-          Padding(
-            padding: const EdgeInsets.only(
-              left: 75,
-              right: 75,
-            ),
-            child: ButtonTheme(
-              minWidth: MediaQuery.of(context).size.width,
-              height: 45,
-              child: RaisedButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => CartScreen()));
-                },
-                color: Colors.pink,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(25)),
-                child: Text(
-                  'Add to Cart',
-                  style: TextStyle(color: Colors.white, fontSize: 22),
-                ),
-              ),
-            ),
-          ),
+          Center(
+              child: Container(
+                  width: MediaQuery.of(context).size.width - 50.0,
+                  height: 50.0,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(25.0),
+                      color: Color(0xffec407a)),
+                  child: Center(
+                      child: Text(
+                    'Add to cart',
+                    style: TextStyle(
+                        // fontFamily: 'Varela',
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ))))
         ],
       ),
     );
