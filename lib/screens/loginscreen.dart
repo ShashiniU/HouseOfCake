@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/homescreen/homepage.dart';
+import 'package:flutter_application_2/otherpages/forgot_password.dart';
 
 import 'package:flutter_application_2/screens/custumtextfield.dart';
 import 'package:flutter_application_2/screens/registerscreen.dart';
@@ -103,7 +104,12 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             Row(mainAxisAlignment: MainAxisAlignment.end, children: <Widget>[
               GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Forgotpassword()));
+                  },
                   child: Container(
                     child: Text(
                       'Forget Password?',

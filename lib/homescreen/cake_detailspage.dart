@@ -114,7 +114,7 @@ class CakeDetailsPage extends StatelessWidget {
               child: RaisedButton(
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => CartScreen()));
+                      MaterialPageRoute(builder: (context) => CheckoutPage()));
                 },
                 color: Colors.pink,
                 shape: RoundedRectangleBorder(

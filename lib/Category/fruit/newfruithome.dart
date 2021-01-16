@@ -23,7 +23,7 @@ class NewFruitHome extends StatelessWidget {
         ),
         centerTitle: true,
         title: Text(
-          'Birthday Cakes',
+          'Fruit Cakes',
           style: TextStyle(fontSize: 25),
         ),
         backgroundColor: Colors.amber[900],
