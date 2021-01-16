@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/Category/CategoryPage.dart';
+import 'package:flutter_application_2/cart/cartpage.dart';
 
 import 'firstpage.dart';
 import 'thirdpage.dart';
-import 'fourthpage.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage>
       ),
       body: TabBarView(
         controller: controller,
-        children: [FirstPage(), CategoryPage(), ThirdPage(), FourthPage()],
+        children: [FirstPage(), CategoryPage(), ThirdPage(), CheckoutPage()],
       ),
     );
   }

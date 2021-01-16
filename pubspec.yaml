@@ -75,6 +75,7 @@ flutter:
     - assets/cakecategories/fruitCakes/
     - assets/cakecategories/themeCakes/
     - assets/cakecategories/weddingCakes/
+    - assets/shothimages/
 
 
   #   - images/a_dot_ham.jpeg

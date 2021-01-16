@@ -5,7 +5,7 @@ class ThirdPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('third page'),
+        title: Text('Profile page'),
         backgroundColor: Colors.pinkAccent,
       ),
     );
