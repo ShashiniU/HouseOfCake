@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/Category/CategoryPage.dart';
 import 'package:flutter_application_2/homescreen/cake_detailspage.dart';
 
 class NewFruitHome extends StatelessWidget {
@@ -11,23 +10,6 @@ class NewFruitHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        toolbarHeight: 100,
-        elevation: 1.0,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white),
-          onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => CategoryPage()));
-          },
-        ),
-        centerTitle: true,
-        title: Text(
-          'Fruit Cakes',
-          style: TextStyle(fontSize: 25),
-        ),
-        backgroundColor: Colors.amber[900],
-      ),
       backgroundColor: Colors.yellow[900],
       body: ListView(
         children: [
@@ -50,34 +32,34 @@ class NewFruitHome extends StatelessWidget {
                     'Rs.2500',
                     context),
                 _cakeCard(
-                    'Structured princess cake',
+                    ' Fruit cake',
                     "assets/cakecategories/fruitCakes/cake2.jpg",
                     'Rs.2500',
                     context),
                 _cakeCard(
-                    'Chocolate Cake birthd',
+                    'Peanuts Fruit Cake ',
                     "assets/cakecategories/fruitCakes/cake3.jpeg",
                     'Rs.2500',
                     context),
                 _cakeCard(
-                    'Simple rounded birthday cake',
+                    'Simple rounded Fruit cake',
                     "assets/cakecategories/fruitCakes/cake4.jpg",
                     'Rs.2500',
                     context),
                 _cakeCard(
-                    'Pincess birthday',
+                    'Chocolate Fruit cake ',
                     "assets/cakecategories/fruitCakes/cake5.jpg",
                     'Rs.2500',
                     context),
                 _cakeCard(
-                    'Pink mashmelos structured cake',
+                    'Pink mashmelos Fruit cake',
                     "assets/cakecategories/fruitCakes/cake6.jpg",
                     'Rs.2500',
                     context),
               ],
             ),
           ),
-          SizedBox(height: 15.0)
+          SizedBox(height: 180.0)
         ],
       ),
     );
@@ -88,9 +70,12 @@ class NewFruitHome extends StatelessWidget {
       padding: EdgeInsets.only(top: 1.0, bottom: 1.0, left: 2.0, right: 2.0),
       child: InkWell(
         onTap: () {
-          Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => CakeDetailsPage(
-                  assetPath: imgPath, cakeprice: price, cakename: name)));
+          Navigator.push(
+              context,
+              PageRouteBuilder(
+                  transitionDuration: Duration(milliseconds: 800),
+                  pageBuilder: (_, __, ___) => CakeDetailsPage(
+                      assetPath: imgPath, cakeprice: price, cakename: name)));
         },
         child: Container(
           decoration: BoxDecoration(

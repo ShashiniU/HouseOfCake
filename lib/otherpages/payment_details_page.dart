@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/homescreen/homepage.dart';
-import 'package:flutter_application_2/otherpages/delivery_details_page.dart';
+import 'package:flutter_application_2/otherpages/appbar.dart';
 
 final paymentController = TextEditingController();
 final nameController = TextEditingController();
@@ -33,10 +33,8 @@ class Paymentdetailspage extends StatelessWidget {
                     size: 35,
                   ),
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => Deliverydetailspage()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => OtherAppBar()));
                   },
                 );
               },
@@ -318,8 +316,7 @@ class Paymentdetailspage extends StatelessWidget {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) =>
-                                          HomePage()));
+                                      builder: (context) => HomePage()));
                             },
                             color: Colors.pink,
                             shape: RoundedRectangleBorder(

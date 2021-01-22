@@ -35,7 +35,7 @@ class Forgotpassword extends StatelessWidget {
               height: 30,
             ),
             Text(
-              "We will send you a text message of a verification code to your registered phone number",
+              "We will send you a email of a verification code to your registered email",
               style: TextStyle(
                 fontFamily: "Times New Roman",
                 color: Colors.black,
@@ -49,15 +49,6 @@ class Forgotpassword extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  Text(
-                    "Try another way",
-                    style: TextStyle(
-                      fontFamily: "Times New Roman",
-                      color: Colors.blueAccent,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                    ),
-                  ),
                   Spacer(),
                   SizedBox(
                     height: 80,

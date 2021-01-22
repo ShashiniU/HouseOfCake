@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/Category/CategoryPage.dart';
 import 'package:flutter_application_2/homescreen/cake_detailspage.dart';
 
 class NewBirthdayHome extends StatelessWidget {
@@ -11,23 +10,6 @@ class NewBirthdayHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        toolbarHeight: 100,
-        elevation: 1.0,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white),
-          onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => CategoryPage()));
-          },
-        ),
-        centerTitle: true,
-        title: Text(
-          'Birthday Cakes',
-          style: TextStyle(fontSize: 25),
-        ),
-        backgroundColor: Colors.pinkAccent,
-      ),
       backgroundColor: Colors.pink[100],
       body: ListView(
         children: [
@@ -77,7 +59,7 @@ class NewBirthdayHome extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 15.0)
+          SizedBox(height: 180.0)
         ],
       ),
     );
@@ -88,9 +70,12 @@ class NewBirthdayHome extends StatelessWidget {
       padding: EdgeInsets.only(top: 1.0, bottom: 1.0, left: 2.0, right: 2.0),
       child: InkWell(
         onTap: () {
-          Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => CakeDetailsPage(
-                  assetPath: imgPath, cakeprice: price, cakename: name)));
+          Navigator.push(
+              context,
+              PageRouteBuilder(
+                  transitionDuration: Duration(milliseconds: 800),
+                  pageBuilder: (_, __, ___) => CakeDetailsPage(
+                      assetPath: imgPath, cakeprice: price, cakename: name)));
         },
         child: Container(
           decoration: BoxDecoration(
