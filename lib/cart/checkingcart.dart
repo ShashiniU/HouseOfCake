@@ -1,13 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_application_2/cart/cartpage.dart';
 
 import 'package:flutter_application_2/constant.dart';
-import 'package:flutter_application_2/homescreen/homepage.dart';
 
-import 'package:flutter_application_2/screens/welcomescreen.dart';
-
-class LoadinPage extends StatelessWidget {
+class CheckingCartPage extends StatelessWidget {
   final Future<FirebaseApp> _initialization = Firebase.initializeApp();
   @override
   Widget build(BuildContext context) {
@@ -38,12 +36,25 @@ class LoadinPage extends StatelessWidget {
                   if (streamSnapshot.connectionState ==
                       ConnectionState.active) {
                     User _user = streamSnapshot.data;
+                    //user not logged in
                     if (_user == null) {
-                      //user not logged in
-                      return WelcomeScreen();
+                      return AlertDialog(
+                        title: Text("Error"),
+                        content: Container(
+                          child: Text("User not logged in"),
+                        ),
+                        actions: [
+                          FlatButton(
+                            child: Text("OK"),
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                          ),
+                        ],
+                      );
                     } else {
                       //user logged in
-                      return HomePage();
+                      return CheckoutPage();
                     }
                   }
                   return Scaffold(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/Category/CategoryPage.dart';
-import 'package:flutter_application_2/otherpages/delivery_details_page.dart';
+import 'package:flutter_application_2/otherpages/appbar.dart';
 
 class CheckoutPage extends StatelessWidget {
   @override
@@ -37,22 +37,14 @@ class CheckoutPage extends StatelessWidget {
               Text(
                 "My Orders",
                 style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.pink,
                     fontSize: 24,
-                    fontWeight: FontWeight.bold),
+                    fontWeight: FontWeight.w900),
               ),
               const SizedBox(
                 height: 40,
               ),
-              OrderListItem(
-                item: OrderList(
-                  itemname: " Theme",
-                  qty: 1,
-                  itemprice: "Rs2500",
-                  bgcolor: Colors.pink,
-                  itemimage: "assets/cakecategories/themeCakes/cake5.jpg",
-                ),
-              ),
+              OrderListItem(),
               SizedBox(
                 height: 300,
               ),
@@ -69,7 +61,7 @@ class CheckoutPage extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => Deliverydetailspage()));
+                              builder: (context) => OtherAppBar()));
                     },
                     color: Colors.pink,
                     shape: RoundedRectangleBorder(
@@ -91,7 +83,7 @@ class CheckoutPage extends StatelessWidget {
 
 class OrderList {
   final String itemname;
-  final String itemprice;
+  final int itemprice;
   final String itemimage;
   final int qty;
   final Color bgcolor;
@@ -100,10 +92,33 @@ class OrderList {
       {this.itemname, this.itemprice, this.itemimage, this.qty, this.bgcolor});
 }
 
-class OrderListItem extends StatelessWidget {
-  final OrderList item;
+class OrderListItem extends StatefulWidget {
+  @override
+  _OrderListItemState createState() => _OrderListItemState();
+}
 
-  const OrderListItem({Key key, this.item}) : super(key: key);
+class _OrderListItemState extends State<OrderListItem> {
+  int _n = 1;
+
+  get bgcolor => Colors.pink;
+
+  get itemimage => "assets/cakecategories/fruitCakes/cake2.jpg";
+
+  String get itemname => " Fruit Cake";
+
+  get itemprice => 2500;
+
+  void add() {
+    setState(() {
+      _n++;
+    });
+  }
+
+  void minus() {
+    setState(() {
+      if (_n != 0) _n--;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -114,28 +129,28 @@ class OrderListItem extends StatelessWidget {
           height: 100,
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(
-              color: item.bgcolor, borderRadius: BorderRadius.circular(20)),
-          child: item.itemimage != null
+              color: bgcolor, borderRadius: BorderRadius.circular(20)),
+          child: itemimage != null
               ? Image.asset(
-                  item.itemimage,
+                  itemimage,
                   fit: BoxFit.cover,
                 )
               : null,
         ),
         const SizedBox(
-          width: 20,
+          width: 100,
         ),
         Expanded(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                item.itemname,
+                itemname,
                 style: TextStyle(
-                  color: Colors.black,
+                  color: Colors.pink,
                   fontSize: 18,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w900,
                 ),
               ),
               const SizedBox(
@@ -145,7 +160,7 @@ class OrderListItem extends StatelessWidget {
                 decoration: BoxDecoration(
                   border: Border.all(
                     color: Colors.pink,
-                    width: 1,
+                    width: 2,
                   ),
                   borderRadius: BorderRadius.circular(10),
                 ),
@@ -154,39 +169,36 @@ class OrderListItem extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     IconButton(
-                      iconSize: 18,
-                      padding: const EdgeInsets.all(2),
-                      icon: Icon(Icons.remove),
-                      onPressed: () {},
+                      onPressed: minus,
+                      icon: Icon(Icons.remove, color: Colors.black),
                     ),
-                    Text(
-                      "${item.qty}",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18),
-                    ),
+                    Text('$_n',
+                        style: TextStyle(
+                            fontSize: 18.0,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w900)),
                     IconButton(
-                      iconSize: 18,
-                      padding: const EdgeInsets.all(2),
-                      icon: Icon(Icons.add),
-                      onPressed: () {},
+                      onPressed: add,
+                      icon: Icon(
+                        Icons.add,
+                        color: Colors.black,
+                      ),
                     ),
                   ],
                 ),
-              )
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Text(
+                "\R\s\.\ ${itemprice * _n}",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ],
-          ),
-        ),
-        const SizedBox(
-          width: 10,
-        ),
-        Text(
-          "${item.itemprice}",
-          style: TextStyle(
-            color: Colors.grey.shade600,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
           ),
         ),
       ],

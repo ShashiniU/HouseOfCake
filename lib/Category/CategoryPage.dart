@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/Category/annivesary/newanniveryhome.dart';
-import 'package:flutter_application_2/Category/birthday/newbirthdayhome.dart';
-import 'package:flutter_application_2/Category/fruit/newfruithome.dart';
-import 'package:flutter_application_2/Category/theme/newthemehome.dart';
-import 'package:flutter_application_2/Category/wedding/newweddinhome.dart';
-import 'package:flutter_application_2/homescreen/custumdesignPage.dart';
+import 'package:flutter_application_2/Category/annivesary/abbiversaryappbar.dart';
+import 'package:flutter_application_2/Category/birthday/birthdayappbar.dart';
+import 'package:flutter_application_2/Category/checkcustomdesign.dart';
+import 'package:flutter_application_2/Category/fruit/fruitappbar.dart';
+
+import 'package:flutter_application_2/Category/theme/themeappbar.dart';
+import 'package:flutter_application_2/Category/wedding/weddingappbar.dart';
 import 'package:flutter_application_2/homescreen/homepage.dart';
 
 class CategoryPage extends StatelessWidget {
@@ -52,7 +53,7 @@ class CategoryPage extends StatelessWidget {
                   child: InkWell(
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => CustumDesignPAge()));
+                          builder: (context) => CheckingCustomDesign()));
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -98,7 +99,7 @@ class CategoryPage extends StatelessWidget {
                   child: InkWell(
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => NewBirthdayHome()));
+                          builder: (context) => BirthdayAppbar()));
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -144,7 +145,7 @@ class CategoryPage extends StatelessWidget {
                   child: InkWell(
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => NewFruitHome()));
+                          builder: (context) => FruitAppbar()));
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -190,7 +191,7 @@ class CategoryPage extends StatelessWidget {
                   child: InkWell(
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => NewThemeHome()));
+                          builder: (context) => ThemeAppbar()));
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -236,7 +237,7 @@ class CategoryPage extends StatelessWidget {
                   child: InkWell(
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => NewAnnivesaryHome()));
+                          builder: (context) => NewAnniversary()));
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -283,7 +284,7 @@ class CategoryPage extends StatelessWidget {
                   child: InkWell(
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => NewWeddingHome()));
+                          builder: (context) => WeddingAppbar()));
                     },
                     child: Container(
                       decoration: BoxDecoration(

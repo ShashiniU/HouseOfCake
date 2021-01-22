@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/cart/cartpage.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter_application_2/cart/checkingcart.dart';
 
 class CakeDetailsPage extends StatelessWidget {
   final assetPath, cakeprice, cakename;
@@ -9,7 +10,7 @@ class CakeDetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.pinkAccent,
+        backgroundColor: Colors.amber[900],
         elevation: 1.0,
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.white),
@@ -35,10 +36,12 @@ class CakeDetailsPage extends StatelessWidget {
           Hero(
               tag: assetPath,
               child: Image.asset(assetPath,
-                  height: 250.0, width: 150.0, fit: BoxFit.contain)),
+                  height: 250.0, width: 500.0, fit: BoxFit.fitWidth)),
           SizedBox(height: 20.0),
-          Center(
+          Hero(
+            tag: cakeprice,
             child: Text(cakeprice,
+                textAlign: TextAlign.center,
                 style: TextStyle(
                     // fontFamily: 'Varela',
                     fontSize: 22.0,
@@ -113,10 +116,12 @@ class CakeDetailsPage extends StatelessWidget {
               height: 45,
               child: RaisedButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => CheckoutPage()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => CheckingCartPage()));
                 },
-                color: Colors.pink,
+                color: Colors.amber[900],
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25)),
                 child: Text(
