@@ -54,6 +54,7 @@ The society is heading towards the modernization and social changes these days. 
 <li>Advanced push notification</li>
 <li>Rating and reviews</li>
 <li>Refer and earn</li>
+    
   </section>
   
   
