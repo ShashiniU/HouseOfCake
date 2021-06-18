@@ -14,7 +14,7 @@ This mobile application design for online orderfavorite cakes and user can uploa
 
 <li><a class="nav-link" href="#Description">Description</a>
 <li><a class="nav-link" href="#Used-Technologies">Used Technologies</a>
-<li><a class="nav-link" href="#features">Features of this application</a>
+<li><a class="nav-link" href="#Features-of-this-application">Features of this application</a>
 <li><a class="nav-link" href="#License">License</a>
 
 <section id="Description">
