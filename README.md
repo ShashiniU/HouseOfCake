@@ -12,10 +12,10 @@ This mobile application design for online orderfavorite cakes and user can uploa
 
 ## Table of content
 
-<li><a class="nav-link" href="Description">Description</a>
-<li><a class="nav-link" href="Technologies">Used Technologies</a>
-<li><a class="nav-link" href="Features">Features of this application</a>
-<li><a class="nav-link" href="License">License</a>
+<li><a class="nav-link" href="#Description">Description</a>
+<li><a class="nav-link" href="#Technologies">Used Technologies</a>
+<li><a class="nav-link" href="#Features">Features of this application</a>
+<li><a class="nav-link" href="#License">License</a>
 
 <section id="Description">
   
