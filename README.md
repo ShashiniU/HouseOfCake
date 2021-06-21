@@ -5,8 +5,9 @@
 
 Preview
 
+https://user-images.githubusercontent.com/71724618/122716457-e6d3f300-d287-11eb-8db8-e61ad43ae765.mp4
 
-https://user-images.githubusercontent.com/71724618/122539779-9c633400-d045-11eb-89cb-541f381c264d.mp4
+
 
 This mobile application design for online orderfavorite cakes and user can upload their favorite designs as well.
 
